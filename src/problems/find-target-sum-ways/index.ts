@@ -2,7 +2,7 @@
  * Дан масси чисел
  * Найдите количество вариантов как набрать сумму targetSum используя вычитания и сложения
  */
-const targetSum = (nums: number[], target: number): number => {
+const findTargetSumWays = (nums: number[], target: number): number => {
   const _targetSum = (sum: number = 0, startIndex: number = 0): number => {
     if (startIndex >= nums.length) {
       return Number(sum === target)
@@ -17,4 +17,4 @@ const targetSum = (nums: number[], target: number): number => {
   return _targetSum()
 }
 
-export default targetSum
+export default findTargetSumWays
