@@ -2,7 +2,6 @@
   "name": "cronis-recursion",
   "version": "1.0.0",
   "description": "",
-  "main": "src/problems/01-frog/index.ts",
   "scripts": {
     "test": "jest"
   },

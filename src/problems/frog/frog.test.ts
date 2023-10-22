@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import frog from './index'
+import frog from '.'
 
 describe('frog', () => {
   const matrix: [n: number, string[]][] = [
