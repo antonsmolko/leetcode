@@ -1,3 +1,3 @@
-### Numbers With Same Consecutive Differences
+### Letter Case Permutation
 
-[leetcode](https://leetcode.com/problems/numbers-with-same-consecutive-differences/)
+[leetcode](https://leetcode.com/problems/letter-case-permutation/submissions/)
