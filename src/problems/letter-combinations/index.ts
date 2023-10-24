@@ -1,6 +1,9 @@
 /**
- * Полный перебор. Maximum Product of the Length of Two Palindromic Subsequences
- * Найти максимальное произведение длин полиндромных подпоследовательностей
+ * Given a string containing digits from 2-9 inclusive,
+ * return all possible letter combinations that the number could represent.
+ * Return the answer in any order.
+ * A mapping of digits to letters (just like on the telephone buttons) is given below.
+ * Note that 1 does not map to any letters.
  */
 const letterCombination = (digits: string): string[] => {
     const combinations: string[] = []
