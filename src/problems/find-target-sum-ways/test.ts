@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import findTargetSumWays from '.'
+import solution from '.'
 
 describe('findTargetSumWays', () => {
   const matrix: [nums: number[], target: number, output: number][] = [
@@ -8,6 +8,6 @@ describe('findTargetSumWays', () => {
   ]
 
   test.each(matrix)('should work with nums: %s, target: %s', (nums, target, expected): void => {
-    expect(findTargetSumWays(nums, target)).toEqual(expected);
+    expect(solution(nums, target)).toEqual(expected);
   })
 });

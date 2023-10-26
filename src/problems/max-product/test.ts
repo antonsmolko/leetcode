@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import maxProduct from '.'
+import solution from '.'
 
 describe('maxProduct', () => {
   const matrix: [s: string, number][] = [
@@ -9,6 +9,6 @@ describe('maxProduct', () => {
   ]
 
   test.each(matrix)('should work with "%s"', (s, expected): void => {
-    expect(maxProduct(s)).toEqual(expected);
+    expect(solution(s)).toEqual(expected);
   })
 });

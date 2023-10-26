@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import numsSameConsecDiff from '.'
+import solution from '.'
 
 describe('numsSameConsecDiff', () => {
   const matrix: [n: number, k: number, number[]][] = [
@@ -8,6 +8,6 @@ describe('numsSameConsecDiff', () => {
   ]
 
   test.each(matrix)('should work with n = %s, k = %s', (n, k, expected): void => {
-    expect(numsSameConsecDiff(n, k)).toEqual(expected);
+    expect(solution(n, k)).toEqual(expected);
   })
 });

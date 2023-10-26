@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import closestCost from '.'
+import solution from '.'
 
 describe('closestCost', () => {
   const matrix: [baseCosts: number[], toppingCosts: number[], target: number, output: number][] = [
@@ -12,7 +12,7 @@ describe('closestCost', () => {
   test.each(matrix)(
     'should work with baseCosts: %s, toppingCosts: %s, target: %s',
     (baseCosts, toppingCosts, target, expected): void => {
-      expect(closestCost(baseCosts, toppingCosts, target)).toEqual(expected);
+      expect(solution(baseCosts, toppingCosts, target)).toEqual(expected);
     }
   )
 });

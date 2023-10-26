@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import generateParentheses from '.'
+import solution from '.'
 
 describe('generateParentheses', () => {
   const matrix: [n: number, string[]][] = [
@@ -9,6 +9,6 @@ describe('generateParentheses', () => {
   ]
 
   test.each(matrix)('should work with %s', (n, expected): void => {
-    expect(generateParentheses(n)).toEqual(expected);
+    expect(solution(n)).toEqual(expected);
   })
 });

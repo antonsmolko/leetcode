@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import letterCasePermutation from '.'
+import solution from '.'
 
 describe('letterCasePermutation', () => {
   const matrix: [s: string, string[]][] = [
@@ -8,6 +8,6 @@ describe('letterCasePermutation', () => {
   ]
 
   test.each(matrix)('should work with "%s"', (s, expected): void => {
-    expect(letterCasePermutation(s)).toEqual(expected);
+    expect(solution(s)).toEqual(expected);
   })
 });

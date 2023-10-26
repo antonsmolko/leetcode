@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import frog from '.'
+import solution from '.'
 
 describe('frog', () => {
   const matrix: [n: number, string[]][] = [
@@ -10,6 +10,6 @@ describe('frog', () => {
   ]
 
   test.each(matrix)('should work with %s', (n, expected): void => {
-    expect(frog(n)).toEqual(expected);
+    expect(solution(n)).toEqual(expected);
   })
 });
