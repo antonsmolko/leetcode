@@ -1,6 +1,3 @@
-/**
- * Регистр букв
- */
 const permute = (nums: number[]): number[][] => {
   const swap = (arr: number[], index1: number, index2: number) => {
     const tmp = arr[index1]

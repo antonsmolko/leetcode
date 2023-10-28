@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import solution from '.'
 
-describe('maxProduct', () => {
+describe('letterCombinations', () => {
   const matrix: [digits: string, expected: string[]][] = [
     ['23', ['ad','ae','af','bd','be','bf','cd','ce','cf']],
     ['', []],

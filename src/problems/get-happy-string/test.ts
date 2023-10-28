@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import solution from '.'
 
-describe('permute', () => {
+describe('getHappyString', () => {
   const matrix: [n: number, k: number, expected: string][] = [
     [1, 3, 'c'],
     [1, 4, ''],
