@@ -1,11 +1,11 @@
-const permute = (nums: number[]): number[][] => {
+const permuteUnique = (nums: number[]): number[][] => {
   const swap = (arr: number[], index1: number, index2: number) => {
     [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
   }
 
   const permutations: number[][] = []
 
-  const _permute = (startIndex: number = 0, candidate: number[]) => {
+  const _permuteUnique = (candidate: number[], startIndex: number = 0) => {
     if (startIndex === nums.length - 1) {
       const permutation = []
       for (let i = 0; i < candidate.length; i += 1) {
@@ -14,16 +14,23 @@ const permute = (nums: number[]): number[][] => {
       permutations.push(permutation)
     }
 
+    type TCache = {
+      [k: string]: boolean
+    }
+    const cache: TCache = {}
     for (let i = startIndex; i < nums.length; i += 1) {
+      if (cache[candidate[i]]) continue
+      cache[candidate[i]] = true
+
       swap(candidate, startIndex, i)
-      _permute(startIndex + 1, candidate)
+      _permuteUnique(candidate, startIndex + 1)
       swap(candidate, startIndex, i)
     }
   }
 
-  _permute(0, nums)
+  _permuteUnique(nums)
 
   return permutations
 }
 
-export default permute
+export default permuteUnique
