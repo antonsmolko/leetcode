@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import solution from '.'
 
-describe('combine', () => {
+describe('combinationSum3', () => {
   const matrix: [n: number, k: number, expected: number[][]][] = [
     [3, 7, [[1,2,4]]],
     [3, 9, [[1,2,6],[1,3,5],[2,3,4]]],
