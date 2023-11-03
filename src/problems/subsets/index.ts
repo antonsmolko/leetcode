@@ -2,8 +2,6 @@ const subsets = (nums: number[]): number[][] => {
     const set: number[][] = []
 
     const iter = (candidate: number[] = [], startIndex: number = 0) => {
-        if (startIndex > nums.length) return
-
         set.push([...candidate])
 
         for (let i = startIndex; i < nums.length; i += 1) {
