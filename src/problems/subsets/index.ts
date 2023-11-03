@@ -5,8 +5,7 @@ const subsets = (nums: number[]): number[][] => {
         set.push([...candidate])
 
         for (let i = startIndex; i < nums.length; i += 1) {
-            const num = nums[i]
-            candidate.push(num)
+            candidate.push(nums[i])
             iter(candidate, i + 1)
             candidate.pop()
         }
