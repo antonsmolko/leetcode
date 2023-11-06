@@ -2,16 +2,12 @@ const punishmentNumber = (n: number): number => {
     const checkSubsetsSum = (num: number, square: number): boolean => {
         const squareStr = String(square)
         const iter = (candidate: number = 0, startIndex: number = 0): boolean => {
-            if (startIndex === squareStr.length) {
-                return candidate === num
-            }
+            if (startIndex === squareStr.length) return candidate === num
             if (candidate > num) return false
 
             for (let i = startIndex; i < squareStr.length; i += 1) {
                 const num = parseInt(squareStr.slice(startIndex, i + 1))
-                const check = iter(candidate + num, i + 1)
-
-                if (check) return true
+                if (iter(candidate + num, i + 1)) return true
             }
 
             return false
@@ -19,6 +15,30 @@ const punishmentNumber = (n: number): number => {
 
         return iter()
     }
+
+    /**
+     * Optimized checkSubsetsSum
+     * const checkSubsetsSum = (num: number, square: number): boolean => {
+     *     const iter = (candidate: number = 0, digits: number = square): boolean => {
+     *         if (digits === 0) return candidate === num
+     *
+     *         let divisor = 10
+     *         let trimmedDigits = digits
+     *
+     *         while (trimmedDigits !== 0) {
+     *             const lastNum = digits % divisor
+     *             trimmedDigits = Math.trunc(digits / divisor)
+     *             if (iter(candidate + lastNum, trimmedDigits)) return true
+     *
+     *             divisor *= 10
+     *         }
+     *
+     *         return false
+     *     }
+     *
+     *     return iter()
+     * }
+     */
 
     let sum = 0
 
