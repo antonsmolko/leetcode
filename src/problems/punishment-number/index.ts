@@ -20,7 +20,7 @@ const punishmentNumber = (n: number): number => {
      * Optimized checkSubsetsSum
      * const checkSubsetsSum = (num: number, square: number): boolean => {
      *     const iter = (candidate: number = 0, digits: number = square): boolean => {
-     *         if (digits === 0) return candidate === num
+     *         if (candidate + digits === num) return true
      *
      *         let divisor = 10
      *         let trimmedDigits = digits
