@@ -3,10 +3,10 @@ import solution from '.'
 
 describe('maxLength', () => {
   const matrix: [arr: string[], expected: number][] = [
-    // [["un","iq","ue"], 4],
-    // [["cha","r","act","ers"], 6],
-    // [["abcdefghijklmnopqrstuvwxyz"], 26],
-    // [["aa","bb"], 0],
+    [["un","iq","ue"], 4],
+    [["cha","r","act","ers"], 6],
+    [["abcdefghijklmnopqrstuvwxyz"], 26],
+    [["aa","bb"], 0],
     [["jnfbyktlrqumowxd","mvhgcpxnjzrdei"], 16]
   ]
 
