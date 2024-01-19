@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals'
-import solution from '.'
+import solution from './repetition'
 
 describe('canPartitionKSubsets', () => {
   const matrix: [nums: number[], k: number, expected: boolean][] = [

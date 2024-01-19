@@ -1,5 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
-import solution from '.'
+import solution from './repetition'
 
 describe('generateParentheses', () => {
   const matrix: [n: number, string[]][] = [
