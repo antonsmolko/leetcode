@@ -1,20 +1,18 @@
 import { describe, expect, test } from '@jest/globals'
 import solution from '.'
 
-describe('sort', () => {
-    describe('merge', () => {
-        const matrix: [intervals: number[][], expected: number[][]][] = [
-            [[[1,3],[2,6],[8,10],[15,18]], [[1,6],[8,10],[15,18]]],
-            [[[1,4],[4,5]], [[1,5]]],
-            [[[1,3]], [[1,3]]],
-            [[[1,4],[0,2]], [[0,4]]]
+describe('heap/hash', () => {
+    describe('topKFrequent', () => {
+        const matrix: [words: string[], k: number, expected: string[]][] = [
+            [["i","love","leetcode","i","love","coding"], 2, ["i","love"]],
+            [["the","day","is","sunny","the","the","the","sunny","is","is"], 4, ["the","is","sunny","day"]]
         ]
 
         test.each(matrix)(
             'should work',
-            (intervals, expected
+            (words, k, expected
             ): void => {
-                expect(solution(intervals)).toEqual(expected)
+                expect(solution(words, k)).toEqual(expected)
             })
     })
 })
