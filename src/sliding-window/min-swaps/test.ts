@@ -2,8 +2,8 @@ import { describe, expect, test } from '@jest/globals'
 import solution from '.'
 
 describe('sliding window', () => {
-    describe('getMinSwapsCount', () => {
-        const matrix: [numbers: number[], expected: number][] = [
+    describe('minSwaps', () => {
+        const matrix: [nums: number[], expected: number][] = [
             [[0,0,0,1,0], 0],
             [[1,0,1,0,1], 1],
             [[1,0,1,0,1,0,0,1,1,0,1], 3]
@@ -11,9 +11,9 @@ describe('sliding window', () => {
 
         test.each(matrix)(
             'should work',
-            (numbers, expected
+            (nums, expected
             ): void => {
-                expect(solution(numbers)).toEqual(expected)
+                expect(solution(nums)).toEqual(expected)
             })
     })
 })
