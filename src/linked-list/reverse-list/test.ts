@@ -13,16 +13,18 @@ const genNodeList = (size: number, reverse: boolean = false) => {
     return head
 }
 
-describe('reverseList', () => {
-    const matrix: [head: ListNode | null, expected: ListNode | null][] = [
-        [genNodeList(5), genNodeList(5, true)],
-        [genNodeList(2), genNodeList(2, true)]
-    ]
+describe('linked list', () => {
+    describe('reverseList', () => {
+        const matrix: [head: ListNode | null, expected: ListNode | null][] = [
+            [genNodeList(5), genNodeList(5, true)],
+            [genNodeList(2), genNodeList(2, true)]
+        ]
 
-    test.each(matrix)(
-        'should work',
-        (head, expected
-        ): void => {
-            expect(solution(head)).toEqual(expected);
-        })
-});
+        test.each(matrix)(
+            'should work',
+            (head, expected
+            ): void => {
+                expect(solution(head)).toEqual(expected);
+            })
+    })
+})
