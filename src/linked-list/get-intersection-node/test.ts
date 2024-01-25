@@ -1,13 +1,13 @@
 import { describe, expect, test } from '@jest/globals';
 import solution, { ListNode } from '.'
-const createListNode = (value: unknown, next: ListNode | null = null): ListNode | null => ({ value, next })
+const createListNode = (val: unknown, next: ListNode | null = null): ListNode | null => ({ val, next })
 
 const genNodeList = (arr: number[]) => {
     let head = null
 
     for (let i = 0; i < arr.length; i += 1) {
-        const value = arr[arr.length - 1 - i]
-        head = createListNode(value, head)
+        const val = arr[arr.length - 1 - i]
+        head = createListNode(val, head)
     }
 
     return head
