@@ -10,7 +10,7 @@
  * }
  */
 export type ListNode = {
-    val: unknown;
+    val: number;
     next: ListNode | null;
 }
 
