@@ -1,12 +1,10 @@
 const maximumSum = (nums: number[]): number => {
     const getSumNumbers = (num: number) => {
-        if (num < 10) return num
+        let sum = 0
 
-        let sum = num % 10
-
-        while (num >= 10) {
-            num = ~~(num / 10)
+        while (num > 0) {
             sum += num % 10
+            num = ~~(num / 10)
         }
 
         return sum
