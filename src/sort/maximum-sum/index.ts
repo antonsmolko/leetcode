@@ -10,29 +10,23 @@ const maximumSum = (nums: number[]): number => {
         return sum
     }
 
-    const map = nums.reduce((acc, num) => {
+    let max = -1
+
+    const map: { [sum: number]: number } = {}
+
+    for (let i = 0; i < nums.length; i += 1) {
+        const num = nums[i]
         const sum = getSumNumbers(num)
-        acc[sum] ??= []
-        acc[sum].push(num)
 
-        return acc
-    }, Array(81).fill(null))
-
-    let maxSum = -1
-
-    for (let i = 0; i < map.length; i += 1) {
-        const set = map[i]
-        if (!set || set.length < 2) continue
-
-        if (set.length > 2) {
-            set.sort((a: number, b: number) => b - a)
+        if (map[sum]) {
+            max = Math.max(max, num + map[sum])
         }
 
-        const [num1, num2] = set
-        maxSum = Math.max(maxSum, num1 + num2)
+        map[sum] ??= 0
+        map[sum] = Math.max(map[sum], num)
     }
 
-    return maxSum
+    return max
 }
 
 export default maximumSum
