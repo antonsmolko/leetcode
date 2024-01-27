@@ -16,18 +16,19 @@ const maximumSum = (nums: number[]): number => {
         acc[sum].push(num)
 
         return acc
-    }, {} as { [sum: number]: number[] })
+    }, Array(81).fill(null))
 
-    const values = Object.values(map)
+    let maxSum = -1
 
-    if (values.every(({ length }) => length === 1)) return -1
+    for (let i = 0; i < map.length; i += 1) {
+        const set = map[i]
+        if (!set || set.length < 2) continue
 
-    let maxSum = 0
+        if (set.length > 2) {
+            set.sort((a: number, b: number) => b - a)
+        }
 
-    for (let i = 0; i < values.length; i += 1) {
-        if (values[i].length < 2) continue
-
-        const [num1, num2] = values[i].sort((a, b) => b - a)
+        const [num1, num2] = set
         maxSum = Math.max(maxSum, num1 + num2)
     }
 
