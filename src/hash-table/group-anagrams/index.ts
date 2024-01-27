@@ -1,13 +1,11 @@
 const groupAnagrams = (strs: string[]): string[][] => {
-    const map = new Map<string, string[]>()
+    if (!strs.length) return []
 
-    const sort = (str: string) => {
-        return str.split('').sort().join()
-    }
+    const map = new Map<string, string[]>()
 
     for (let i = 0; i < strs.length; i += 1) {
         const str = strs[i]
-        const sortedStr = sort(str)
+        const sortedStr = str.split('').sort().join()
 
         const anagram = map.get(sortedStr)
         if (anagram) {
