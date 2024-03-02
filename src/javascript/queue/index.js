@@ -1,3 +1,10 @@
+/**
+ * Реализовать очередь асинхронных действий с ограничением по количеству параллельно выполняемых задач
+ * processTask - функция обработчик. Задача считается выполненной после вызова callback
+ * paralleledTask - количество параллельно обрабатываемых задач
+ * whenEmpty - функция-callback вызываемая по окончании обработки всех задач
+ */
+
 class Queue {
     tasks = []
 
@@ -74,46 +81,3 @@ queue.loop()
 //         }
 //     }
 // }
-
-const objectCreate = function(protoObject) {
-    function F() {}
-    F.prototype = protoObject;
-
-    return new F();
-}
-
-const b = { name: 'Anton' }
-const a = objectCreate(b)
-
-console.log(a.name)
-console.log(Object.getPrototypeOf(a))
-
-let range = {
-    from: 1,
-    to: 5,
-    [Symbol.iterator]: function() {
-        let from = this.from
-        let to = this.to
-
-        return {
-            next() {
-                if (from <= to) {
-                    return {
-                        done: false,
-                        value: from++
-                    }
-                } else {
-                    return {
-                        done: true
-                    }
-                }
-            }
-        }
-    }
-}
-
-for (let value of range) {
-    console.log('value', value)
-}
-
-console.log(Math.max(...range))
