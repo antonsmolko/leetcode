@@ -10,6 +10,7 @@ describe('optimize-paths', () => {
         'me.companies.address.street',
         'me.companies.address',
         'me.companies.name.first',
+        'me.companies.name',
         'me.companies.name.last',
         'me.companies.address.city',
         'me.store.products.name',
